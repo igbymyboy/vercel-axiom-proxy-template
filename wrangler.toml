@@ -1,0 +1,19 @@
+name = "vercel-axiom-proxy"
+main = "src/index.ts"
+compatibility_date = "2026-02-19"
+
+[vars]
+AXIOM_DATASET = "my-app-logs" # Change to your Axiom dataset name
+
+# Secrets (set via `wrangler secret put`):
+#   AXIOM_API_TOKEN      - Your Axiom API token with ingest permissions
+#   VERCEL_DRAIN_SECRET  - The signing secret Vercel gives you when creating the drain
+
+[observability]
+[observability.logs]
+enabled = true
+invocation_logs = true
+
+[[routes]]
+pattern = "logs.example.com" # Change to your custom domain
+custom_domain = true

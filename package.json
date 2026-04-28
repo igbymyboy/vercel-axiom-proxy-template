@@ -1,0 +1,27 @@
+{
+  "name": "vercel-axiom-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker that proxies Vercel log drain events to Axiom, parsing stringified JSON in the message field",
+  "scripts": {
+    "ship": "wrangler deploy",
+    "dev": "wrangler dev",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.12.14",
+    "@cloudflare/workers-types": "^4.20260219.0",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.56.0",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.66.0"
+  }
+}
